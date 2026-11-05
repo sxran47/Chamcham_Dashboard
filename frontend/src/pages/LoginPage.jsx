@@ -4,6 +4,7 @@ import { useNavigate, Link, useLocation } from "react-router-dom";
 import { authService } from "../services/authService";
 import TextInput from "../components/common/TextInput";
 import SubmitButton from "../components/common/SubmitButton";
+import logo from "../assets/cham-chamnan-logo.png";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -149,14 +150,11 @@ const LoginPage = () => {
         <div className="relative z-10 flex flex-col h-full lg:justify-between overflow-y-auto no-scrollbar">
           {/* Header / Logo */}
           <div className="group/logo cursor-pointer">
-            <div className="flex items-center gap-5 mb-16 lg:mb-24">
-              <div className="bg-primary text-white font-bold h-16 w-16 flex items-center justify-center rounded-xl text-4xl transition-colors duration-500">
-                Z
-              </div>
-              <h1 className="text-4xl lg:text-6xl font-bold tracking-tight text-gray-900">
-                Zippy Till
-              </h1>
-            </div>
+            <img
+              src={logo}
+              alt="Cham-Chamnan"
+              className="w-full max-w-[350px] h-auto mb-12 lg:mb-20"
+            />
 
             <div className="mb-16 lg:mb-24">
               <h2 className="text-5xl lg:text-7xl font-bold mb-8 leading-[1.1] tracking-tight text-gray-900">
@@ -269,7 +267,7 @@ const LoginPage = () => {
         </div>
 
         <div className="mt-12 lg:absolute lg:bottom-10 text-[10px] text-inactive font-bold tracking-widest uppercase opacity-60">
-          © 2026 ZIPPY TILL • SWISS MODERN TERMINAL
+          © 2026 CHAM-CHAMNAN • SWISS MODERN TERMINAL
         </div>
       </div>
     </div>

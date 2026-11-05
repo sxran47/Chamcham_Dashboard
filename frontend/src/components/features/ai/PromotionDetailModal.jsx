@@ -98,7 +98,7 @@ const PromotionDetailModal = ({ isOpen, onClose, recommendation, onCreate }) => 
                   ZT
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-gray-900">ZippyTill Intelligence</p>
+                  <p className="text-xs font-bold text-gray-900">Cham-Chamnan Intelligence</p>
                   <p className="text-[10px] text-gray-400 uppercase tracking-wider">Business Optimization</p>
                 </div>
               </div>
