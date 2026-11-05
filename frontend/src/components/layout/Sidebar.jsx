@@ -14,6 +14,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import ConfirmModal from "../modals/ConfirmModal";
+import logo from "../../assets/cham-chamnan-logo.png";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -92,11 +93,11 @@ const Sidebar = () => {
           className={`p-8 pb-10 flex items-center justify-center group/logo cursor-pointer ${!isOpen ? "px-4" : ""}`}
         >
           <div className="relative" onClick={toggleSidebar}>
-            <h1
-              className={`font-black text-gray-900 tracking-tighter group-hover/logo:text-primary transition-colors duration-500 ${isOpen ? "text-2xl" : "text-xl"}`}
-            >
-              {isOpen ? "ZIPPY TILL" : "ZT"}
-            </h1>
+            {isOpen ? (
+              <img src={logo} alt="Cham-Chamnan" className="w-[150px] h-auto" />
+            ) : (
+              <span className="text-xl font-black text-primary">CC</span>
+            )}
             <div className="absolute -bottom-2 left-0 right-0 h-1 bg-primary/20 rounded-full overflow-hidden">
               <div className="h-full bg-primary w-0 group-hover/logo:w-full transition-all duration-700 ease-out" />
             </div>

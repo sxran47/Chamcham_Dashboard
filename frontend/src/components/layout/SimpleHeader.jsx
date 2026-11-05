@@ -1,9 +1,10 @@
 import React from "react";
-import { LogOut, Store } from "lucide-react";
+import { LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { authService } from "../../services/authService";
 import ConfirmModal from "../modals/ConfirmModal";
 import { useState } from "react";
+import logo from "../../assets/cham-chamnan-logo.png";
 
 /**
  * SimpleHeader Component
@@ -34,32 +35,8 @@ const SimpleHeader = ({ isDark = false }) => {
         }`}
       >
         {/* Brand / Logo Area */}
-        <div className="flex items-center gap-4 group cursor-pointer">
-          <div
-            className={`w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 ${
-              isDark
-                ? "bg-white text-gray-900 shadow-xl"
-                : "bg-primary text-white shadow-lg shadow-primary/20"
-            }`}
-          >
-            <Store size={24} strokeWidth={2.5} />
-          </div>
-          <div className="flex flex-col">
-            <h1
-              className={`text-xl font-black leading-none tracking-tighter ${
-                isDark ? "text-white" : "text-gray-900"
-              }`}
-            >
-              ZIPPY TILL
-            </h1>
-            <span
-              className={`text-[10px] font-black uppercase tracking-[0.2em] mt-1.5 ${
-                isDark ? "text-inactive opacity-60" : "text-inactive"
-              }`}
-            >
-              Premium POS System
-            </span>
-          </div>
+        <div className="group cursor-pointer">
+          <img src={logo} alt="Cham-Chamnan" className="w-[120px] h-auto" />
         </div>
 
         {/* Actions Area */}
